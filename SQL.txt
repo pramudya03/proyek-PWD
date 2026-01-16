@@ -1,0 +1,30 @@
+CREATE DATABASE responsi;
+USE wisata_db;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(255)
+);
+
+INSERT INTO users VALUES (NULL, 'admin', MD5('admin'));
+
+CREATE TABLE tempat_wisata (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100),
+    lokasi VARCHAR(100),
+    harga INT,
+    deskripsi TEXT
+);
+
+INSERT INTO tempat_wisata (nama, lokasi, harga, deskripsi) VALUES
+('Pantai Kuta', 'Bali', 15000, 'Pantai terkenal dengan pasir putih dan pemandangan matahari terbenam.'),
+('Candi Borobudur', 'Magelang, Jawa Tengah', 50000, 'Candi Buddha terbesar di dunia dan menjadi warisan budaya UNESCO.'),
+('Kawah Putih', 'Bandung, Jawa Barat', 25000, 'Danau kawah dengan air berwarna putih kehijauan yang eksotis.'),
+('Gunung Bromo', 'Malang, Jawa Timur', 30000, 'Gunung berapi aktif dengan panorama lautan pasir dan sunrise yang indah.'),
+('Danau Toba', 'Sumatera Utara', 20000, 'Danau vulkanik terbesar di Asia Tenggara dengan Pulau Samosir di tengahnya.'),
+('Pantai Parangtritis', 'Yogyakarta', 10000, 'Pantai legendaris dengan ombak besar dan pemandangan matahari terbenam.'),
+('Taman Mini Indonesia Indah', 'Jakarta', 25000, 'Tempat wisata edukasi yang menampilkan kebudayaan seluruh Indonesia.'),
+('Pulau Komodo', 'Nusa Tenggara Timur', 150000, 'Habitat asli hewan purba komodo dan keindahan alam laut.'),
+('Air Terjun Madakaripura', 'Probolinggo, Jawa Timur', 20000, 'Air terjun tinggi yang dikelilingi tebing batu alami.'),
+('Bukit Teletubbies', 'Sumba, NTT', 10000, 'Bukit hijau bergelombang dengan pemandangan alam yang unik dan fotogenik.');
